@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/mystyle.css">
+	</head>
+	<body onload="myFunction()" onresize="myFunction()" onscroll="myFunction2()">
+		<div>
+			<p>안녕하세요 조성호의 포트폴리오 웹페이지 입니다. 해당 페이지는 바닐라자바스크립트로 제작되었으며 다른 홈페이지에서 영감을 받아 직접 구현한 웹페이지 입니다.</p>
+		</div>
+
+		<div>
+			<p>안녕하세요 조성호의 포트폴리오 웹페이지 입니다. 해당 페이지는 바닐라자바스크립트로 제작되었으며 다른 홈페이지에서 영감을 받아 직접 구현한 웹페이지 입니다.</p>
+			<p>hello</p>
+		</div>
+
+		<div>
+			<p>안녕하세요 조성호의 포트폴리오 웹페이지 입니다. 해당 페이지는 바닐라자바스크립트로 제작되었으며 다른 홈페이지에서 영감을 받아 직접 구현한 웹페이지 입니다.</p>
+			<p>hello</p>
+		</div>
+
+		<div>
+			<p>안녕하세요 조성호의 포트폴리오 웹페이지 입니다. 해당 페이지는 바닐라자바스크립트로 제작되었으며 다른 홈페이지에서 영감을 받아 직접 구현한 웹페이지 입니다.</p>
+			<p>hello</p>
+		</div>
+
+		<div>
+			<p>안녕하세요 조성호의 포트폴리오 웹페이지 입니다. 해당 페이지는 바닐라자바스크립트로 제작되었으며 다른 홈페이지에서 영감을 받아 직접 구현한 웹페이지 입니다.</p>
+			<p>hello</p>
+		</div>
+		<script>
+			function myFunction ( ) {
+
+				var list = document.getElementsByTagName("div") ;
+
+				for ( i = 0 ; i < list.length; i++ ) {
+
+					list[i].style.border = "solid" ;
+					list[i].style.height = window.innerHeight + "px" ;
+					list[i].style.top= i * window.innerHeight + "px" ;
+
+				}
+			}
+
+			function myFunction2(){
+
+				var myHeight = 6 + window.innerHeight ;
+				var list = document.getElementsByTagName("div") ;
+				var tmpHeight
+
+				switch(Math.round(pageYOffset/window.innerHeight)){
+					case 0:
+						list[0].style.top = pageYOffset - Math.pow(pageYOffset ,3)* 100 / Math.pow(window.innerHeight,3) ;
+						list[0].style.opacity = 1 - 5 * Math.pow(pageYOffset , 2) / Math.pow(window.innerHeight,2) ;
+
+					case 1:
+						list[1].style.top = pageYOffset - Math.pow(pageYOffset - window.innerHeight,3)* 100 / Math.pow(window.innerHeight,3) ;
+						list[1].style.opacity = 1 - 5 * Math.pow(pageYOffset - window.innerHeight,2) / Math.pow(window.innerHeight,2) ;
+						break;
+					case 2:
+						list[2].style.top = pageYOffset - Math.pow(pageYOffset - 2 * window.innerHeight,3)* 100 / Math.pow(window.innerHeight,3) ;
+						list[2].style.opacity = 1 - 5 * Math.pow(pageYOffset - 2 * window.innerHeight,2) / Math.pow(window.innerHeight,2) ;
+						break;
+					case 3:
+						list[3].style.top = pageYOffset - Math.pow(pageYOffset - 3 * window.innerHeight,3)* 100 / Math.pow(window.innerHeight,3) ;
+						list[3].style.opacity = 1 - 5 * Math.pow(pageYOffset - 3 * window.innerHeight,2) / Math.pow(window.innerHeight,2) ;
+						break;
+					case 4:
+						list[4].style.top = pageYOffset - Math.pow(pageYOffset - 4 * window.innerHeight,3)* 100 / Math.pow(window.innerHeight,3) ;
+						list[4].style.opacity = 1 - 5 * Math.pow(pageYOffset - 3 * window.innerHeight,2) / Math.pow(window.innerHeight,2) ;
+						break;
+
+					default:
+				}
+			}
+
+		</script>
+	</body>
+</html>
